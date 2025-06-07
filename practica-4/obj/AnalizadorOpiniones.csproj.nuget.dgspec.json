@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROGRAMACION\\practica-4\\AnalizadorOpiniones\\AnalizadorOpiniones.csproj": {}
+    "D:\\PROGRAMACION\\practica-4\\AnalizadorOpiniones.csproj": {}
   },
   "projects": {
-    "D:\\PROGRAMACION\\practica-4\\AnalizadorOpiniones\\AnalizadorOpiniones.csproj": {
+    "D:\\PROGRAMACION\\practica-4\\AnalizadorOpiniones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROGRAMACION\\practica-4\\AnalizadorOpiniones\\AnalizadorOpiniones.csproj",
+        "projectUniqueName": "D:\\PROGRAMACION\\practica-4\\AnalizadorOpiniones.csproj",
         "projectName": "AnalizadorOpiniones",
-        "projectPath": "D:\\PROGRAMACION\\practica-4\\AnalizadorOpiniones\\AnalizadorOpiniones.csproj",
+        "projectPath": "D:\\PROGRAMACION\\practica-4\\AnalizadorOpiniones.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\PROGRAMACION\\practica-4\\AnalizadorOpiniones\\obj\\",
+        "outputPath": "D:\\PROGRAMACION\\practica-4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,20 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.ML": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "Microsoft.ML.DataView": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "Microsoft.ML.Recommender": {
+              "target": "Package",
+              "version": "[0.22.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
