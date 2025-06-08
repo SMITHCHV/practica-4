@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Recomendación de Productos";
+    var recomendaciones = ViewBag.Recomendaciones as List<(string ProductId, float Score)>;
+}
+
+<h2>Recomendación de Productos</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="userId">Ingresa tu UserId:</label>
+        <input type="text" class="form-control" name="userId" id="userId" required />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Obtener recomendaciones</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger mt-2">@ViewBag.Error</div>
+}
+
+@if (recomendaciones != null && recomendaciones.Count > 0)
+{
+    <h4 class="mt-4">Recomendaciones para el usuario: <strong>@ViewBag.UserId</strong></h4>
+    <ul class="list-group mt-2">
+        @foreach (var rec in recomendaciones)
+        {
+            <li class="list-group-item">
+                Producto: <strong>@rec.ProductId</strong> | Score: @rec.Score:F2
+            </li>
+        }
+    </ul>
+}
