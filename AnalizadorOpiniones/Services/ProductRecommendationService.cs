@@ -1,4 +1,5 @@
 using Microsoft.ML;
+using Microsoft.ML.Data;   // Para GetColumn o CreateEnumerable
 using Microsoft.ML.Trainers;
 using AnalizadorOpiniones.MLModels;
 using System.IO;
@@ -11,8 +12,8 @@ namespace AnalizadorOpiniones.Services
     {
         private readonly string _dataPath = Path.Combine("Data", "ratings-data.csv");
         private readonly MLContext _mlContext;
-        private ITransformer _model;
-        private PredictionEngine<ProductRating, ProductPrediction> _predictionEngine;
+        private ITransformer? _model;  // Nullable para evitar warning CS8618
+        private PredictionEngine<ProductRating, ProductPrediction>? _predictionEngine; // Nullable también
 
         private List<string> _products = new();
 
@@ -27,13 +28,16 @@ namespace AnalizadorOpiniones.Services
             if (!File.Exists(_dataPath)) return;
 
             var dataView = _mlContext.Data.LoadFromTextFile<ProductRating>(_dataPath, hasHeader: true, separatorChar: ',');
-            _products = dataView.GetColumn<string>("ProductId").Distinct().ToList();
+
+            // Extraer lista de productos desde el enumerable (alternativa segura a GetColumn)
+            var dataEnumerable = _mlContext.Data.CreateEnumerable<ProductRating>(dataView, reuseRowObject: false);
+            _products = dataEnumerable.Select(x => x.ProductId).Distinct().ToList();
 
             var options = new MatrixFactorizationTrainer.Options
             {
-                MatrixColumnIndexColumnName = "UserId",
-                MatrixRowIndexColumnName = "ProductId",
-                LabelColumnName = "Label",
+                MatrixColumnIndexColumnName = nameof(ProductRating.UserId),
+                MatrixRowIndexColumnName = nameof(ProductRating.ProductId),
+                LabelColumnName = nameof(ProductRating.Label),
                 LossFunction = MatrixFactorizationTrainer.LossFunctionType.SquareLossOneClass,
                 Alpha = 0.01,
                 Lambda = 0.025,
@@ -48,6 +52,9 @@ namespace AnalizadorOpiniones.Services
 
         public List<(string ProductId, float Score)> Recommend(string userId, int topN = 5)
         {
+            if (_predictionEngine == null)
+                return new List<(string, float)>();
+
             return _products
                 .Select(p => (ProductId: p, Score: _predictionEngine.Predict(new ProductRating { UserId = userId, ProductId = p }).Score))
                 .OrderByDescending(x => x.Score)
