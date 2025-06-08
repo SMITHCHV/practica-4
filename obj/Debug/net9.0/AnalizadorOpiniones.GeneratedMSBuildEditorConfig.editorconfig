@@ -1,0 +1,57 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AnalizadorOpiniones
+build_property.RootNamespace = AnalizadorOpiniones
+build_property.ProjectDir = D:\Nueva carpeta\practica-4\AnalizadorOpiniones\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Nueva carpeta\practica-4\AnalizadorOpiniones
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/Nueva carpeta/practica-4/AnalizadorOpiniones/Views/Analisis/Sentimiento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hbGlzaXNcU2VudGltaWVudG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Nueva carpeta/practica-4/AnalizadorOpiniones/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Nueva carpeta/practica-4/AnalizadorOpiniones/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Nueva carpeta/practica-4/AnalizadorOpiniones/Views/Recomendacion/Productos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjb21lbmRhY2lvblxQcm9kdWN0b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Nueva carpeta/practica-4/AnalizadorOpiniones/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Nueva carpeta/practica-4/AnalizadorOpiniones/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Nueva carpeta/practica-4/AnalizadorOpiniones/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Nueva carpeta/practica-4/AnalizadorOpiniones/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Nueva carpeta/practica-4/AnalizadorOpiniones/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-6ovs4n5bg0
