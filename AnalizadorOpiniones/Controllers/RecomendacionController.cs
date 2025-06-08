@@ -7,9 +7,9 @@ namespace AnalizadorOpiniones.Controllers
     {
         private readonly ProductRecommendationService _service;
 
-        public RecomendacionController()
+        public RecomendacionController(ProductRecommendationService service)
         {
-            _service = new ProductRecommendationService();
+            _service = service;
         }
 
         public IActionResult Productos()
@@ -20,6 +20,12 @@ namespace AnalizadorOpiniones.Controllers
         [HttpPost]
         public IActionResult Productos(string userId)
         {
+            if (string.IsNullOrWhiteSpace(userId))
+            {
+                ViewBag.Error = "Por favor, ingresa un UserId válido.";
+                return View();
+            }
+
             var recomendaciones = _service.Recommend(userId);
             ViewBag.UserId = userId;
             ViewBag.Recomendaciones = recomendaciones;

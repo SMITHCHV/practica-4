@@ -1,10 +1,11 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Agregar controladores con vistas
+// Agrega controladores con vistas
 builder.Services.AddControllersWithViews();
 
-// Registrar el servicio de análisis de sentimiento como singleton
+// Servicios de ML registrados como singleton
 builder.Services.AddSingleton<AnalizadorOpiniones.Services.SentimentService>();
+builder.Services.AddSingleton<AnalizadorOpiniones.Services.ProductRecommendationService>();
 
 var app = builder.Build();
 
@@ -17,14 +18,12 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
 
-// Ruta por defecto apuntando al controlador Analisis y acción Sentimiento
+// Ruta por defecto (Home/Index)
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Analisis}/{action=Sentimiento}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
