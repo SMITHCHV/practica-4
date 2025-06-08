@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MSEGGz6Y6gs=",
+  "dgSpecHash": "vk+M16rMaBA=",
   "success": true,
-  "projectFilePath": "D:\\Nueva carpeta\\practica-4\\AnalizadorOpiniones\\AnalizadorOpiniones.csproj",
+  "projectFilePath": "D:\\Nueva carpeta\\practica-4\\AnalizadorOpiniones.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.ml\\4.0.2\\microsoft.ml.4.0.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.ml.cpumath\\4.0.2\\microsoft.ml.cpumath.4.0.2.nupkg.sha512",
