@@ -1,14 +1,33 @@
 UserId,ProductId,Label
-U1,P1,5
-U1,P2,4
-U1,P3,5
-U2,P2,1
-U2,P4,2
-U3,P1,4
-U3,P4,5
-U3,P5,3
-U4,P3,2
-U4,P5,4
-U5,P2,5
-U5,P3,4
-U5,P4,4
+U1,Smartphone Samsung Galaxy S23,5
+U1,Auriculares Sony WH-1000XM5,4
+U1,Laptop Dell XPS 13,5
+U1,Smartwatch Apple Watch Series 9,4
+U2,Auriculares Sony WH-1000XM5,2
+U2,Tablet Lenovo Tab P11,3
+U2,Parlante Bluetooth JBL Flip 6,5
+U3,Smartphone Samsung Galaxy S23,4
+U3,Tablet Lenovo Tab P11,5
+U3,Monitor LG UltraWide 29",3
+U3,Cámara Canon EOS M50,5
+U4,Laptop Dell XPS 13,2
+U4,Monitor LG UltraWide 29",4
+U4,Consola Nintendo Switch OLED,5
+U5,Auriculares Sony WH-1000XM5,5
+U5,Laptop Dell XPS 13,4
+U5,Tablet Lenovo Tab P11,4
+U6,Teclado Mecánico Logitech G Pro,3
+U6,Smartwatch Apple Watch Series 9,5
+U6,Consola Nintendo Switch OLED,4
+U7,Cámara Canon EOS M50,5
+U7,Tablet Lenovo Tab P11,2
+U7,Parlante Bluetooth JBL Flip 6,4
+U8,Smartphone Samsung Galaxy S23,3
+U8,Teclado Mecánico Logitech G Pro,4
+U8,Monitor LG UltraWide 29",3
+U9,Laptop Dell XPS 13,5
+U9,Smartwatch Apple Watch Series 9,5
+U9,Auriculares Sony WH-1000XM5,4
+U10,Parlante Bluetooth JBL Flip 6,2
+U10,Cámara Canon EOS M50,4
+U10,Consola Nintendo Switch OLED,5
